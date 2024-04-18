@@ -15,7 +15,7 @@ public class MultiServer {
     public static final Integer LOCALHOST_PORT = 9999;
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         try {
             ServerSocket socket = new ServerSocket(LOCALHOST_PORT);
