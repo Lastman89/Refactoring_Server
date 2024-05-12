@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 
 
 public class MultiServer {
-    static ExecutorService executeIt = Executors.newFixedThreadPool(64);
+    static ExecutorService executeIt = Executors.newFixedThreadPool(1);
     public static final Integer LOCALHOST_PORT = 9999;
 
 
@@ -48,7 +48,7 @@ public class MultiServer {
                 // монопоточную нить = сервер - Server и тот
                 // продолжает общение от лица сервера
                 executeIt.execute(new Server(clientSocket));
-                System.out.print("Connection accepted.");
+                System.out.println("Connection accepted.");
             }
 
             // закрытие пула нитей после завершения работы всех нитей
